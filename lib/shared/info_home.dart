@@ -33,10 +33,11 @@ class _InfoHomeState extends State<InfoHome> {
               ),
               const SizedBox(height: 8),
               Text(
-                "Search for a youtuber you like and see the recommended books.\n\nSearch for multiple youtuber's and find out on which books they agree. \n\nIn adittion, the algorithm will recommend other youtuber based on your search.",
+                "Search for a youtuber you like and see the recommended books.\n\nSearch for multiple youtuber and find out on which books they agree. \n\nIn adittion, the algorithm will recommend other youtuber based on your search.",
                 style: style,
               ),
               const Divider(
+                height: 20,
                 color: Colors.red,
               ),
               Text(
@@ -83,7 +84,7 @@ class _InfoHomeState extends State<InfoHome> {
                   children: [
                     IconButton(
                         onPressed: () => helperPressed(),
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.health_and_safety_sharp,
                           color: Color.fromARGB(255, 255, 249, 249),
                         )),
@@ -117,7 +118,7 @@ class _InfoHomeState extends State<InfoHome> {
           builder: (context) => Padding(
               padding: EdgeInsets.only(
                   bottom: MediaQuery.of(context).viewInsets.bottom),
-              child: AdminModal()));
+              child: const AdminModal()));
     }
     setState(() {
       clicked += 1;
@@ -143,7 +144,6 @@ class AdminModal extends StatelessWidget {
   }
 
   checkCode(String val, BuildContext context) {
-    // TODO protect code from git
     if (val == "YoubooksDev") {
       Navigator.push(
         context,

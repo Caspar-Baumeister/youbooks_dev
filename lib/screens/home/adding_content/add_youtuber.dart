@@ -126,7 +126,6 @@ class _AddYoutuberPageState extends State<AddYoutuberPage> {
   void search(String query) {
     BooksProvider booksProvider =
         Provider.of<BooksProvider>(context, listen: false);
-    print(booksProvider.books.length);
     setState(() {
       searchResults = booksProvider.books.where((book) {
         final titleLower = book.title.toLowerCase();
@@ -136,7 +135,6 @@ class _AddYoutuberPageState extends State<AddYoutuberPage> {
         return titleLower.contains(searchLower) ||
             authorLower.contains(searchLower);
       }).toList();
-      print(searchResults);
     });
   }
 

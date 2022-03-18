@@ -4,7 +4,6 @@ import 'package:youbooks/model/books.dart';
 import 'package:youbooks/model/youtuber.dart';
 import 'package:youbooks/provider/books_provider.dart';
 import 'package:youbooks/provider/youtuber_provider.dart';
-import 'package:youbooks/shared/helper/helper_functions.dart';
 
 class YoutuberTile extends StatelessWidget {
   const YoutuberTile(
